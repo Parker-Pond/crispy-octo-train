@@ -1,74 +1,56 @@
-// let counter = 1
 
-// while (counter < 4){
-//     console.log ("in loop " + counter);
-//     counter++
+
+//! problem 1
+
+// let trumpsWallPosts = 20
+// let trumpsWallMaterial = "wood"
+
+// for (let beenBuilt = 1; beenBuilt < trumpsWallPosts; beenBuilt++){
+//     console.log(`jarvis has built ${beenBuilt} walls of ${trumpsWallMaterial} so far, he has ${trumpsWallPosts - beenBuilt} left`)
 // }
 
-// console.log("outside of loop " + counter)
+//!problem 2
 
-
-
-// const thing1 = ["dog","cat", "badger","other thing"]
-
-// for (let i = 0; i< thing1.length; i++) {
-//  console.log(thing1[i] )
+// function zombieTurretDefence(numberofzombies,numberOfTurrets){
+//     while (numberofzombies>0){
+//     console.log("Zombie Down")
+//     numberofzombies -= numberOfTurrets
 // }
-
-// function iCanCountISwear(number){
-// for(let i = number; i >= 0; i--)
-// console.log(i)
 // }
+// zombieTurretDefence(10,3)
 
-// iCanCountISwear(5)
+//! Problem 3
 
-// function pddPrinter(){
-// for(let i = 1; i < 20; i+=2)
-// console.log(i)
+
+// const foodItems = ["canned goods","medicin","weed", "twinkies", "something misterious" ];
+
+// function gatheringThingsFromTheWild(whatAmIGetting){
+//     console.log ("Jarvis found some:")
+//     for (let indexNumber=0; whatAmIGetting.length >= indexNumber; indexNumber++)
+//         if (indexNumber < whatAmIGetting.length){
+//         console.log (whatAmIGetting[indexNumber])}
+//         else{
+//             console.log (indexNumber)
+//         }
 // }
-// pddPrinter()
+// gatheringThingsFromTheWild(foodItems)
 
-// ?function multiplyMe(thingy){
-//  ?   for (let i = 1; i <= 10; i++) {
-//   ?   console.log( thingy * i )}
+// ! problem 4
 
-// let i=1
-//    * while (i<=10){
-//     !console.log (thingy * i )
-//  TODO:   i++}
-// }
-// multiplyMe(16)
+const foodItems = ["canned goods","Raider","medicin","weed","Zombie", "twinkies", "something misterious" ];
 
-
-// let arrayOfThings = [ 1,2,3,4,5,6,7,90]
-
-// function openTheBox(arrayName, ){
-//     for(i=0; i < arrayName.length; i++){
-//         console.log(arrayName[i])
-//     }
-
-// }
-
-// openTheBox(arrayOfThings)
-
-// !function factorialize(num){
-//    let answer = 1
-//    while(num > 0){
-//    answer = answer * num
-//    num--}
-// }
-// !console.log(factorialize(5))
-
-const myArray = [1,2,3,4,5,6]
-
-
-function addToMyArray(arrayName, Element){
-    console.log (arrayName);
-    arrayName= arrayName.pop;
-    arrayName = arrayName.unshift(Element);
-    console.log (arrayName);
+function RaiderAvoidencePlan(WhatJarvisHasFound){
+    for (let whereIsJarvis = 0; whereIsJarvis < WhatJarvisHasFound.length; whereIsJarvis++){
+            let whatIsIt = WhatJarvisHasFound[whereIsJarvis];
+        if (whatIsIt === "Raider" || whatIsIt ==="Zombie"){
+        console.log (`JARVIS has found a ${whatIsIt}!! ENGAGING AVOIDANCE ACTION PLAN!!"`)
+        }
+        else {
+            console.log(`JARVIS has found ${whatIsIt}`)
+        }
 
 }
+return (`${WhatJarvisHasFound.length} items found on this survey`)
+}
 
-addToMyArray(myArray, "DOG")
-
+console.log(RaiderAvoidencePlan(foodItems))
